@@ -1,0 +1,129 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('background.png'); /* Đường dẫn tới hình nền */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: blur(8px); /* Điều chỉnh độ mờ (px) */
+    z-index: -1; /* Đảm bảo hình nền ở phía sau nội dung */
+}
+
+/* Header */
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 10px 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: inline;
+    margin-right: 15px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Section Styles */
+section {
+    margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Projects Section */
+.project {
+    margin-bottom: 20px;
+}
+
+.project h3 {
+    margin-bottom: 5px;
+}
+
+.project a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+/* Quick Links */
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    background-color: #3498db;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background-color: #2980b9;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    margin: 20px 0;
+    color: #666;
+    font-size: 0.9em;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    header nav ul li {
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}
